@@ -4,13 +4,19 @@
 
 from ggame import *
 
+#constants
+ROWS=100
+COLS=100
+CELL_SIZE=100
+
+
 if __name__=='__main__':
     
     
     #colors
     green=Color(0x006600,1)
     
-    jungleBox=RectangleAsset(1000,1000,LineStyle(1,green),green)
+    jungleBox=RectangleAsset(CELL_SIZE*COLS,CELL_SIZE*ROWS,LineStyle(1,green),green)
     
     Sprite(jungleBox)
     
