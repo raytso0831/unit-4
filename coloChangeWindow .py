@@ -2,7 +2,7 @@
 #3/19/18
 #colorChangeWindow.py
 from random import randint
-from g game import*
+from ggame import*
 def mouseClick(event):
     
     red=Color(0xFF0000,1) #this is the color red
@@ -11,17 +11,23 @@ def mouseClick(event):
     black=Color(0x000000,1)
     num=randint(1,4)
 
-if num==1:
-    color= red
+    if num==1:
+        color= red
 
-elif num==2:
-    color=green
+    elif num==2:
+        color=green
     
-elif num==3:
-    color=blue
+    elif num==3:
+        color=black
+    
+    else:
+        color=blue
 
-else:
-    color=black
+    line = LineStyle(1,color)
+    square = RectangleAsset(1000,1000,line,color)
+    Sprite(square)
 
-Outline=LineStyle(1, color)
-Square=SquareAsset(1000,1000,Outline,color) #width, height, outline, fill
+    
+
+App().listenMouseEvent('click',mouseClick)
+App().run()
