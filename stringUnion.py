@@ -18,4 +18,6 @@ def stringUnion(word1,word2):
     return finalStr
     
 print(stringUnion('mississippi','pennsylvania'))
+        
+   
     
